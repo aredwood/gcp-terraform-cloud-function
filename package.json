@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "deploy": "gcloud functions deploy express-function --entry-point app --runtime nodejs10 --trigger-http",
+    "build": "./node_modules/.bin/tsc",
+    "lint":"tslint --project ."
+  },
+  "name": "gcp-express-function",
+  "version": "0.1.0",
+  "description": "description",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/aredwood/gcp-express-function.git",
+  "author": "Alex <aredwood@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/express": "^4.17.1"
+  }
+}
